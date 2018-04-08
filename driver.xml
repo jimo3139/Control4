@@ -1,0 +1,403 @@
+<devicedata>
+  <copyright>Copyright (c) 2012-2017 Skreens Entertainment Technologies Incorporated - http://skreens.com</copyright>
+  <creator>Skreens</creator>
+  <manufacturer>Skreens</manufacturer>
+  <name>Skreens</name>
+  <model>Skreens</model>
+  <created>03/13/2017 10:00 AM</created>
+  <modified>12/18/2017 4:00 PM</modified>
+  <version>111</version>
+  <small image_source="c4z">icons/logo/Skreens_profile_image-sm.png</small>
+  <large image_source="c4z">icons/logo/Skreens_profile_image.png</large>
+  <control>lua_gen</control>
+  <controlmethod>ip</controlmethod>
+  <driver>DriverWorks</driver>
+  <templatedescription>Skreens Audio/Video Mux</templatedescription>
+  <search_types>
+    <type>Skreens:avswitch:Skreens</type>
+  </search_types>
+  <proxies qty="2">
+    <proxy proxybindingid="5001" name="Skreens AVx" image_source="c4z" small_image="icons/logo/Skreens_profile_image-sm.png" large_image="icons/logo/Skreens_profile_image.png">avswitch</proxy>
+    <proxy proxybindingid="5002" name="Skreens Remote">media_player</proxy>
+  </proxies>
+  <capabilities>
+    <audio_consumer_count>0</audio_consumer_count>
+    <audio_provider_count>0</audio_provider_count>
+    <can_downclass>False</can_downclass>
+    <can_switch>True</can_switch>
+    <can_upclass>True</can_upclass>
+    <has_audio_sense_control>False</has_audio_sense_control>
+    <has_discrete_balance_control>False</has_discrete_balance_control>
+    <has_discrete_bass_control>False</has_discrete_bass_control>
+    <has_discrete_input_select>True</has_discrete_input_select>
+    <has_discrete_loudness_control>False</has_discrete_loudness_control>
+    <has_discrete_mute_control>True</has_discrete_mute_control>
+    <has_discrete_treble_control>False</has_discrete_treble_control>
+    <has_discrete_volume_control>True</has_discrete_volume_control>
+    <has_toad_input_select>False</has_toad_input_select>
+    <has_toggle_loudness_control>False</has_toggle_loudness_control>
+    <has_toggle_mute_control>True</has_toggle_mute_control>
+    <has_up_down_balance_control>False</has_up_down_balance_control>
+    <has_up_down_bass_control>False</has_up_down_bass_control>
+    <has_up_down_treble_control>False</has_up_down_treble_control>
+    <has_up_down_volume_control>True</has_up_down_volume_control>
+    <has_video_sense_control>False</has_video_sense_control>
+    <video_consumer_count>5</video_consumer_count>
+    <video_provider_count>1</video_provider_count>
+    <can_switch_separately>True</can_switch_separately>
+    <requires_separate_switching>True</requires_separate_switching>
+  </capabilities>
+  <connections>
+    <connection>
+      <id>5001</id>
+      <type>2</type>
+      <connectionname>AVSWITCH</connectionname>
+      <consumer>False</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>AVSWITCH</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5002</id>
+      <type>2</type>
+      <connectionname>MEDIA_PLAYER</connectionname>
+      <consumer>False</consumer>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>MEDIA_PLAYER</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>1001</id>
+      <type>5</type>
+      <connectionname>Source 1</connectionname>
+      <consumer>True</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>1002</id>
+      <type>5</type>
+      <connectionname>Source 2</connectionname>
+      <consumer>True</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>1003</id>
+      <type>5</type>
+      <connectionname>Source 3</connectionname>
+      <consumer>True</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>1004</id>
+      <type>5</type>
+      <connectionname>Source 4</connectionname>
+      <consumer>True</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>2001</id>
+      <type>5</type>
+      <connectionname>HDMI Out</connectionname>
+      <consumer>False</consumer>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <id>1101</id>
+      <type>5</type>
+      <connectionname>Skreens UI</connectionname>
+      <consumer>True</consumer>
+      <linelevel>True</linelevel>
+      <idautobind>101</idautobind>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+          <autobind>True</autobind>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5002">
+      <id>2101</id>
+      <type>5</type>
+      <connectionname>Skreens UI</connectionname>
+      <consumer>False</consumer>
+      <linelevel>True</linelevel>
+      <idautobind>101</idautobind>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+          <autobind>True</autobind>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>6001</id>
+      <facing>1</facing>
+      <connectionname>Network</connectionname>
+      <type>4</type>
+      <consumer>True</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>True</linelevel>
+      <classes>
+        <class>
+          <classname>TCP</classname>
+          <ports>
+            <port>
+              <number>1000</number>
+              <auto_connect>True</auto_connect>
+              <monitor_connection>True</monitor_connection>
+              <keep_connection>True</keep_connection>
+            </port>
+          </ports>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <config>
+    <power_management_method>AlwaysOn</power_management_method>
+    <power_command_delay>0</power_command_delay>
+    <power_delay>0</power_delay>
+    <power_command_needed>False</power_command_needed>
+    <serialsettings>9600 8 none 1 none 232</serialsettings>
+    <documentation file="www\documentation.rtf" />
+    <script file="driver.lua" />
+    <commands>
+      <command>
+        <name>Default layouts</name>
+        <description>Default Layout Selector</description>
+        <params>
+          <param>
+            <name>Skreens Layouts</name>
+            <type>CUSTOM_SELECT:CustomSelectLayouts</type>
+            <search>
+              <filters>
+                <filter name="layouts">Layouts</filter>
+              </filters>
+            </search>
+          </param>
+        </params>
+      </command>
+      <command>
+        <name>Doorbell Actions</name>
+        <description>Doorbell Descriptions</description>
+        <params>
+          <param>
+            <name>Front Door Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+          <param>
+            <name>Back Door Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+          <param>
+            <name>Driveway Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+        </params>
+      </command>
+      <command>
+        <name>Motion Actions</name>
+        <description>Camera Motion Descriptions</description>
+        <params>
+          <param>
+            <name>Front Door Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+          <param>
+            <name>Back Door Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+          <param>
+            <name>Driveway Layout</name>
+            <type>CUSTOM_SELECT:CustomDoorBell</type>
+          </param>
+        </params>
+      </command>
+    </commands>
+    <actions>
+      <action>
+        <name> - Select Default Layout</name>
+        <command>Action Select Layout</command>
+        <params>
+          <param>
+            <name>Layouts</name>
+            <type>CUSTOM_SELECT:CustomSelectLayouts</type>
+            <search>
+              <filters>
+                <filter name="layouts">Layouts</filter>
+              </filters>
+            </search>
+          </param>
+        </params>
+      </action>
+      <action>
+		<name> - Exchange Layout Control</name>
+		<command>ACTION_pingPongControl</command>
+	  </action>
+      <action>
+        <name> - Display Driver Debug Info</name>
+        <command>ACTION_printdebuginfo</command>
+      </action>
+      <action>
+        <name> - Rediscover Attached Devices</name>
+        <command>ACTION_printdeviceinfo</command>
+      </action>
+    </actions>
+    <properties>
+      <property>
+        <name>Log Level</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>2 - Warning</default>
+        <items>
+          <item>0 - Alert</item>
+          <item>1 - Error</item>
+          <item>2 - Warning</item>
+          <item>3 - Info</item>
+          <item>4 - Trace</item>
+          <item>5 - Debug</item>
+        </items>
+      </property>
+      <property>
+        <name>Log Mode</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>Off</default>
+        <items>
+          <item>Off</item>
+          <item>Print</item>
+          <item>Log</item>
+          <item>Print and Log</item>
+        </items>
+      </property>
+      <property>
+        <name>Static IP Address</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>0.0.0.0</default>
+      </property>
+      <property>
+        <name>On Screen Display Timeout</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>15</default>
+      </property>
+      <property>
+        <name>Return control to Skreens</name>
+        <type>LIST</type>
+        <items>
+          <item>Three Dot</item>
+          <item>Red Button</item>
+          <item>Green Button</item>
+          <item>Yellow Button</item>
+          <item>Blue Button</item>
+          <item>Always On</item>
+        </items>
+        <default>Red Button</default>
+        <readonly>false</readonly>
+      </property>
+      <property>
+        <name>Skreens HOME Layout</name>
+        <type>LIST</type>
+        <items>
+          <item>Three Dot</item>
+          <item>Red Button</item>
+          <item>Green Button</item>
+          <item>Yellow Button</item>
+          <item>Blue Button</item>
+        </items>
+        <default>Blue Button</default>
+        <readonly>false</readonly>
+      </property>
+      <property>
+        <name>Unit Device Name</name>
+        <default></default>
+        <type>STRING</type>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>Default Layout ID</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default>1</default>
+      </property>
+      <property>
+        <name>SDDP IP Detected</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default>0.0.0.0</default>
+      </property>
+      <property>
+        <name>Exchange Currently Loaded Layout</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default>none</default>
+      </property>
+      <property>
+        <name>Exchange State</name>
+        <type>LIST</type>
+        <items>
+          <item>Enabled</item>
+          <item>Disabled</item>
+        </items>
+        <default>Disabled</default>
+        <readonly>false</readonly>
+      </property>
+      <property>
+        <name>Exchange Time</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>15</default>
+      </property>
+      <property>
+        <name>Exchange Layout A</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>HDMI 1</default>
+      </property>
+      <property>
+        <name>Exchange Layout B</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>HDMI 2</default>
+      </property>
+    </properties>
+  </config>
+  <composer_categories>
+    <category>Audio/Video</category>
+  </composer_categories>
+  <navigator_categories>
+    <category>Home</category>
+  </navigator_categories>
+</devicedata>

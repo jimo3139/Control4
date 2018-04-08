@@ -1,0 +1,15 @@
+
+      <property>
+        <name>Ping Pong Layout 1</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>HDMI 1</default>
+      </property>
+
+      <property>
+        <name>Ping Pong Layout 2</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>HDMI 2</default>
+      </property>
+

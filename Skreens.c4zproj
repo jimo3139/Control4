@@ -1,0 +1,18 @@
+﻿<Driver type="c4z" name="Skreens">
+ <Items>
+  <Item type="dir" c4zDir="www" name="www" recurse="true" exclude="false" />
+  <Item type="file" name="actions.lua" />
+  <Item type="file" name="c4_common.lua" />
+  <Item type="file" name="c4_driver_declarations.lua" />
+  <Item type="file" name="c4_log.lua" />
+  <Item type="file" name="c4_object.lua" />
+  <Item type="file" name="c4_timer.lua" />
+  <Item type="file" name="constants.lua" />
+  <Item type="file" name="driver.lua" />
+  <Item type="file" name="driver.xml" />
+  <Item type="file" name="hdmiRoute.lua" />
+  <Item type="file" name="remote.lua" />
+  <Item type="file" name="utils.lua" />
+  <Item type="file" name="websock.lua" />
+ </Items>
+</Driver>
